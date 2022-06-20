@@ -1,0 +1,9 @@
+file_format: "1"
+id: knob_knob
+name: Knob Knob
+type: shield
+url: https://github.com/zdolson/zmk-config
+requires: [xiao]
+features:
+  - keys
+  - encoder

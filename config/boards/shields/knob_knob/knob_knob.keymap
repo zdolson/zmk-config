@@ -1,5 +1,8 @@
-# Copyright (c) 2022 The ZMK Contributors
-# SPDX-License-Identifier: MIT
+/*
+ * Copyright (c) 2022 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -15,7 +18,7 @@
 // |  PREV      |   PLAY/PAUSE  |     NEXT      |
 // |            |     MUTE      |               |
             bindings = <
-                    &kp KP_F3                 
+                    &kp F3                 
     &kp C_PREV   &kp C_PLAY_PAUSE &kp C_NEXT
                     &kp C_MUTE                
             >;

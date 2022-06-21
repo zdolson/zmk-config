@@ -33,6 +33,8 @@
         };
     };
 
+    &center_encoder { resolution = <2>; };
+
     keymap {
         compatible = "zmk,keymap";
 

@@ -19,7 +19,7 @@
 // |            |      F3       |               |
 // |  PREV      |   PLAY/PAUSE  |     NEXT      |
 // |            |     MUTE      |               |
-            bindings = < &kp C_PLAY_PAUSE &kp CAPSLOCK &kp C_MUTE &kp C_PREV &kp C_NEXT >;
+            bindings = < &kp C_PLAY_PAUSE &kp A &kp C_MUTE &kp C_PREV &kp C_NEXT >;
     //         bindings = <
     //                 &kp F3                 
     // &kp C_PREV   &kp C_PLAY_PAUSE &kp C_NEXT

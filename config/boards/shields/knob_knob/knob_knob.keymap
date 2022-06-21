@@ -14,7 +14,7 @@
         combo_up {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&kp a>;
+            bindings = <&kp A>;
         };
         combo_down {
             timeout-ms = <50>;

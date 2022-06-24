@@ -39,7 +39,13 @@
         default_layer {
             
             // Key Ordering: Center, Up, Down, Left, Right
-            bindings = < &kp C_PLAY_PAUSE &kp A &kp C_MUTE &kp C_PREV &kp C_NEXT >;
+            bindings = < 
+                &kp C_PLAY_PAUSE 
+                &kp A 
+                &kp C_MUTE 
+                &kp C_PREV 
+                &kp C_NEXT 
+            >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };

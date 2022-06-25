@@ -20,25 +20,25 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&tog BT>;
-            layers = <0>
+            layers = <0>;
         };
         combo_default_down {
             timeout-ms = <50>;
             key-positions = <0 2>;
             bindings = <&kp C_MUTE>;
-            layers = <0>
+            layers = <0>;
         };
         combo_default_left {
             timeout-ms = <50>;
             key-positions = <0 3>;
             bindings = <&kp C_PREV>;
-            layers = <0>
+            layers = <0>;
         };
         combo_default_right {
             timeout-ms = <50>;
             key-positions = <0 4>;
             bindings = <&kp C_NEXT>;
-            layers = <0>
+            layers = <0>;
         };
 
         // BT combos
@@ -46,25 +46,25 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&tog BT>;
-            layers = <1>
+            layers = <1>;
         };
         combo__bt_down {
             timeout-ms = <50>;
             key-positions = <0 2>;
             bindings = <&bt BT_SEL 1>;
-            layers = <1>
+            layers = <1>;
         };
         combo__bt_left {
             timeout-ms = <50>;
             key-positions = <0 3>;
             bindings = <&bt BT_SEL 0>;
-            layers = <1>
+            layers = <1>;
         };
         combo__bt_right {
             timeout-ms = <50>;
             key-positions = <0 4>;
             bindings = <&bt BT_SEL 2>;
-            layers = <1>
+            layers = <1>;
         };
 
     };

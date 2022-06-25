@@ -12,10 +12,10 @@
  *  @see https://forum.seeedstudio.com/t/xiao-are-pin-4-and-pin-10-electrically-connected-100-reproduced-on-3-boards/263128/12
  * 
  *  GPIO Pins :: Notes
- *          0 :: Doesn't seem to work (kscan, encoder)
+ *          0 :: Doesn't seem to work (kscan + encoder)
  *          1 :: Works, tested with kscan
- *          2 :: Previously didn't work (Test again)
- *          3 :: Previously didn't work (Test again)
+ *          2 :: Doesn't seem to work (kscan)
+ *          3 :: Doesn't seem to work (kscan)
  *          4 :: Works, tested with kscan + encoder
  *          5 :: Works, tested with kscan + encoder
  *          6 :: Works, tested with kscan
@@ -46,8 +46,8 @@
             = <&xiao_d 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&xiao_d 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 
@@ -56,7 +56,7 @@
         label = "CENTER_ENCODER";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <1>;
+        resolution = <4>;
         status = "okay";
     };
 

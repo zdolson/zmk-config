@@ -4,6 +4,26 @@
  * SPDX-License-Identifier: MIT
  */
 
+/*
+ *  Xiao BLE Pin Verification
+ *  
+ *  Seems like some pins might be electrically connected, so testing various pins for signal.
+ *  If the forum link is for the Xiao BLE (not original Xiao), the pins 5/8 and 4/10 are connected. :'(
+ *  @see https://forum.seeedstudio.com/t/xiao-are-pin-4-and-pin-10-electrically-connected-100-reproduced-on-3-boards/263128/12
+ * 
+ *  GPIO Pins :: Notes
+ *          0 :: Doesn't seem to work (kscan, encoder)
+ *          1 :: Works, tested with kscan
+ *          2 :: Previously didn't work (Test again)
+ *          3 :: Previously didn't work (Test again)
+ *          4 :: Works, tested with kscan + encoder
+ *          5 :: Works, tested with kscan + encoder
+ *          6 :: Works, tested with kscan
+ *          7 :: Works, tested with kscan
+ *          8 :: Works, tested with kscan
+ *          9 :: Previously didn't work (Test again)
+ *         10 :: Previously didn't work (Test again)
+ */
 
 / {
     chosen {
@@ -26,8 +46,8 @@
             = <&xiao_d 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&xiao_d 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&xiao_d 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 
@@ -36,7 +56,7 @@
         label = "CENTER_ENCODER";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <2>;
+        resolution = <1>;
         status = "okay";
     };
 

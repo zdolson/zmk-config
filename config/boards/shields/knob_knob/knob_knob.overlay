@@ -21,8 +21,8 @@
  *          6 :: Works, tested with kscan
  *          7 :: Works, tested with kscan
  *          8 :: Works, tested with kscan
- *          9 :: Previously didn't work (Test again)
- *         10 :: Previously didn't work (Test again)
+ *          9 :: Works, tested with kscan, encoder previously didn't work
+ *         10 :: Works, tested with kscan, encoder previously didn't work
  */
 
 / {
@@ -34,14 +34,14 @@
         compatible = "zmk,kscan-gpio-direct";
         label = "KSCAN";
 
-        // GPIO Pins :: Function    :: Index
-        //         0 :: CW          :: --
-        //         1 :: CCW         :: --
-        //         7 :: PUSH        :: 0 
-        //         8 :: UP          :: 1
+        // GPIO Pins :: Function    :: Corresponding Keymap index
         //         4 :: DOWN        :: 2
-        //         5 :: LEFT        :: 3
-        //         6 :: RIGHT       :: 4
+        //         5 :: CW          :: --
+        //         6 :: CCW         :: -- 
+        //         7 :: PUSH        :: 0
+        //         8 :: UP          :: 1
+        //         9 :: LEFT        :: 3
+        //        10 :: RIGHT       :: 4
         input-gpios
             = <&xiao_d 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&xiao_d 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
@@ -56,7 +56,7 @@
         label = "CENTER_ENCODER";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        resolution = <4>;
+        resolution = <2>;
         status = "okay";
     };
 

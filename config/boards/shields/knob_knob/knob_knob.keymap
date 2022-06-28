@@ -99,7 +99,7 @@
         };
 
     };
-aaeaaaaaaeae
+
     keymap {
         compatible = "zmk,keymap";
 

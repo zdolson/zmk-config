@@ -99,7 +99,7 @@
         };
 
     };
-
+aaeaaaaaaeae
     keymap {
         compatible = "zmk,keymap";
 
@@ -136,9 +136,9 @@
             bindings = < 
                 &kp A 
                 &tog TEST 
-                &mt B C 
-                &mt D E 
-                &mt F G
+                &kp B 
+                &kp D 
+                &kp F
             >;
 
         };

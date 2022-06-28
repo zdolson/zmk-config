@@ -72,6 +72,32 @@
         //     layers = <1>;
         // };
 
+        // TEST combos
+        combo__bt_up {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&tog TEST>;
+            layers = <1>;
+        };
+        combo__bt_down {
+            timeout-ms = <50>;
+            key-positions = <0 2>;
+            bindings = <&mt B C>;
+            layers = <1>;
+        };
+        combo__bt_left {
+            timeout-ms = <50>;
+            key-positions = <0 3>;
+            bindings = <&mt D E>;
+            layers = <1>;
+        };
+        combo__bt_right {
+            timeout-ms = <50>;
+            key-positions = <0 4>;
+            bindings = <&mt F G>;
+            layers = <1>;
+        };
+
     };
 
     keymap {

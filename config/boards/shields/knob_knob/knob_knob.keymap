@@ -74,30 +74,30 @@
         // };
 
         // TEST combos
-        combo__bt_up {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&tog TEST>;
-            layers = <1>;
-        };
-        combo__bt_down {
-            timeout-ms = <50>;
-            key-positions = <0 2>;
-            bindings = <&mt C D>;
-            layers = <1>;
-        };
-        combo__bt_left {
-            timeout-ms = <50>;
-            key-positions = <0 3>;
-            bindings = <&mt F G>;
-            layers = <1>;
-        };
-        combo__bt_right {
-            timeout-ms = <50>;
-            key-positions = <0 4>;
-            bindings = <&mt I J>;
-            layers = <1>;
-        };
+        // combo__bt_up {
+        //     timeout-ms = <50>;
+        //     key-positions = <0 1>;
+        //     bindings = <&tog TEST>;
+        //     layers = <1>;
+        // };
+        // combo__bt_down {
+        //     timeout-ms = <50>;
+        //     key-positions = <0 2>;
+        //     bindings = <&mt C D>;
+        //     layers = <1>;
+        // };
+        // combo__bt_left {
+        //     timeout-ms = <50>;
+        //     key-positions = <0 3>;
+        //     bindings = <&mt F G>;
+        //     layers = <1>;
+        // };
+        // combo__bt_right {
+        //     timeout-ms = <50>;
+        //     key-positions = <0 4>;
+        //     bindings = <&mt I J>;
+        //     layers = <1>;
+        // };
 
     };
 
@@ -135,11 +135,11 @@
             
             // Key Ordering (based on `input-gpios` indices): Center, Up, Down, Left, Right
             bindings = < 
-                &kp A 
+                &none 
                 &tog TEST 
-                &kp B 
-                &kp E 
-                &kp H
+                &mt C D
+                &mt F G
+                &mt I J
             >;
 
         };

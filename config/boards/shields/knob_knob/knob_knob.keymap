@@ -13,6 +13,7 @@
 #define TEST    1
 
 &mt {
+    flavor = "tap-preferred";
     tapping-term-ms = <1000>;
 };
 
@@ -82,19 +83,19 @@
         combo__bt_down {
             timeout-ms = <50>;
             key-positions = <0 2>;
-            bindings = <&mt B C>;
+            bindings = <&mt C D>;
             layers = <1>;
         };
         combo__bt_left {
             timeout-ms = <50>;
             key-positions = <0 3>;
-            bindings = <&mt D E>;
+            bindings = <&mt F G>;
             layers = <1>;
         };
         combo__bt_right {
             timeout-ms = <50>;
             key-positions = <0 4>;
-            bindings = <&mt F G>;
+            bindings = <&mt I J>;
             layers = <1>;
         };
 
@@ -137,8 +138,8 @@
                 &kp A 
                 &tog TEST 
                 &kp B 
-                &kp D 
-                &kp F
+                &kp E 
+                &kp H
             >;
 
         };

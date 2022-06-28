@@ -24,7 +24,7 @@
         combo_default_up {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&tog BT>;
+            bindings = <&tog TEST>;
             layers = <0>;
         };
         combo_default_down {

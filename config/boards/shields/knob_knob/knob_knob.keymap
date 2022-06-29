@@ -18,6 +18,17 @@
 };
 
 / {
+    behaviors {
+        blt: bluetooth_tap{
+        compatible = "zmk,behavior-hold-tap";
+        label = "BLUETOOTH TAP";
+        #binding-cells = <2>;
+        tapping-term-ms = <150>;
+        flavor = "tap-preferred";
+        bindings = <&bt BT_CLR>, <&bt BT_SEL 0>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -86,18 +97,18 @@
         //     bindings = <&mt C D>;
         //     layers = <1>;
         // };
-        // combo__bt_left {
-        //     timeout-ms = <50>;
-        //     key-positions = <0 3>;
-        //     bindings = <&mt F G>;
-        //     layers = <1>;
-        // };
-        // combo__bt_right {
-        //     timeout-ms = <50>;
-        //     key-positions = <0 4>;
-        //     bindings = <&mt I J>;
-        //     layers = <1>;
-        // };
+        combo__bt_left {
+            timeout-ms = <50>;
+            key-positions = <0 3>;
+            bindings = <&mt F G>;
+            layers = <1>;
+        };
+        combo__bt_right {
+            timeout-ms = <1000>;
+            key-positions = <0 4>;
+            bindings = <&mt I J>;
+            layers = <1>;
+        };
 
     };
 
@@ -137,9 +148,9 @@
             bindings = < 
                 &none 
                 &tog TEST 
-                &mt C D
-                &mt F G
-                &mt I J
+                &kp D
+                &mt E
+                &kp H
             >;
 
         };

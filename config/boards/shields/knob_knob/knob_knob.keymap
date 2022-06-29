@@ -146,7 +146,7 @@
             
             // Key Ordering (based on `input-gpios` indices): Center, Up, Down, Left, Right
             bindings = < 
-                &none 
+                &kp A 
                 &tog TEST 
                 &kp D
                 &mt E

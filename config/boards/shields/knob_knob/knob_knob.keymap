@@ -29,6 +29,15 @@
                 , <&macro_tap &bt BT_CLR>
                 ;
         };
+
+        bt_sel0: bluetooth_select_0 {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 0>
+                ;
+        };
     };
 
     behaviors {
@@ -38,7 +47,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            bindings = <&bt_clr0>, <&bt SEL>;
+            bindings = <&bt_clr0>, <&bt>;
         };
     };
 

@@ -19,11 +19,19 @@
 
 / {
     behaviors {
-        hm: homerow_mods {
+        // hm: homerow_mods {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "homerow mods";
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <225>;
+        //     flavor = "tap-preferred";
+        //     bindings = <&kp>, <&kp>;
+        // };
+        blt: bluetooth_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "homerow mods";
+            label = "BLUETOOTH TAP";
             #binding-cells = <2>;
-            tapping-term-ms = <225>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -141,7 +149,8 @@
         combo__bt_right {
             timeout-ms = <50>;
             key-positions = <0 4>;
-            bindings = <&mt &bt_clr0 &bt_sel0>;
+            bindings = <&blt &bt_clr0 &bt_sel0>;
+            // bindings = <&mt &bt_clr0 &bt_sel0>;
             layers = <1>;
         };
 

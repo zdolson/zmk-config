@@ -133,7 +133,10 @@
         };
 
     };
-
+aeaaagfaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     keymap {
         compatible = "zmk,keymap";
 
@@ -170,9 +173,9 @@
             bindings = < 
                 &kp A 
                 &tog TEST 
-                &kp D
+                &bt BT_CLR
                 &kp E
-                &bt_sel0
+                &kp Z
             >;
 
         };

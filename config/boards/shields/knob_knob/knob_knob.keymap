@@ -126,9 +126,9 @@
             layers = <1>;
         };
         combo__bt_right {
-            timeout-ms = <1000>;
+            timeout-ms = <50>;
             key-positions = <0 4>;
-            bindings = <&mt I J>;
+            bindings = <&mt &bt_clr0 &bt_sel0>;
             layers = <1>;
         };
 
@@ -172,7 +172,7 @@
                 &tog TEST 
                 &kp D
                 &kp E
-                &mt &bt_clr0 &bt_sel0
+                &bt_sel0
             >;
 
         };

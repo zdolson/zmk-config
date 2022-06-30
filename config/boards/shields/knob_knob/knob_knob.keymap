@@ -19,17 +19,17 @@
 
 / {
 
-    // macros {
-    //     bt_clr0: bluetooth_clear_0 {
-    //         label = "ZM_zed_em_kay";
-    //         compatible = "zmk,behavior-macro";
-    //         #binding-cells = <0>;
-    //         bindings
-    //             = <&macro_tap &bt BT_SEL 0>
-    //             , <&macro_tap &bt BT_CLR>
-    //             ;
-    //     };
-    // };
+    macros {
+        bt_clr0: bluetooth_clear_0 {
+            label = "ZM_zed_em_kay";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 0>
+                , <&macro_tap &bt BT_CLR>
+                ;
+        };
+    };
 
     behaviors {
         blt: bluetooth_tap {
@@ -38,7 +38,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            bindings = <&bt CLR>, <&bt SEL>;
+            bindings = <&bt_clr0>, <&bt SEL>;
         };
     };
 

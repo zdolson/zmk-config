@@ -19,15 +19,18 @@
 
 / {
     behaviors {
-        blt: bluetooth_tap{
-        compatible = "zmk,behavior-hold-tap";
-        label = "BLUETOOTH TAP";
-        #binding-cells = <2>;
-        tapping-term-ms = <150>;
-        flavor = "tap-preferred";
-        bindings = <&bt>, <&bt>;
+        blt: bluetooth_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BLUETOOTH TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&bt>, <&bt>;
         };
     };
+};
+
+/ {
 
     combos {
         compatible = "zmk,combos";

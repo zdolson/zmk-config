@@ -21,7 +21,7 @@
 
     macros {
         bt_clr0: bluetooth_clear_0 {
-            label = "ZM_zed_em_kay";
+            label = "bluetooth_clear_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -31,7 +31,7 @@
         };
 
         bt_sel0: bluetooth_select_0 {
-            label = "ZM_zed_em_kay";
+            label = "bluetooth_select_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings

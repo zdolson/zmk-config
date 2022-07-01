@@ -15,3 +15,5 @@
 include:
   - board: seeeduino_xiao_ble
     shield: knob_knob
+  - board: nice_nano_v2
+    shield: knob_knob

@@ -18,29 +18,9 @@
 };
 
 / {
-    behaviors {
-        // hm: homerow_mods {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "homerow mods";
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <225>;
-        //     flavor = "tap-preferred";
-        //     bindings = <&kp>, <&kp>;
-        // };
-        blt: bluetooth_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BLUETOOTH TAP";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-            bindings = <&bt_clr0>, <&bt_sel0>;
-        };
-    };
-};
-
-/ {
 
     macros {
+        // Hold Tap Macros for BT 0
         bt_clr0: bluetooth_clear_0 {
             label = "bluetooth_clear_0";
             compatible = "zmk,behavior-macro";
@@ -59,18 +39,76 @@
                 = <&macro_tap &bt BT_SEL 0>
                 ;
         };
+
+        // Hold Tap Macros for BT 1
+        bt_clr1: bluetooth_clear_1 {
+            label = "bluetooth_clear_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 1>
+                , <&macro_tap &bt BT_CLR>
+                ;
+        };
+
+        bt_sel1: bluetooth_select_1 {
+            label = "bluetooth_select_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 1>
+                ;
+        };
+
+        // Hold Tap Macros for BT 2
+        bt_clr2: bluetooth_clear_2 {
+            label = "bluetooth_clear_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 2>
+                , <&macro_tap &bt BT_CLR>
+                ;
+        };
+
+        bt_sel2: bluetooth_select_2 {
+            label = "bluetooth_select_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &bt BT_SEL 2>
+                ;
+        };
     };
 
-    // behaviors {
-    //     blt: bluetooth_tap {
-    //         compatible = "zmk,behavior-hold-tap";
-    //         label = "BLUETOOTH TAP";
-    //         #binding-cells = <2>;
-    //         tapping-term-ms = <150>;
-    //         flavor = "tap-preferred";
-    //         bindings = <&bt_clr0>, <&bt_sel0>;
-    //     };
-    // };
+    behaviors {
+        ht_bt0: hold_tap_bluetooth_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT hold tap 0";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&bt_clr0>, <&bt_sel0>;
+        };
+
+        ht_bt1: hold_tap_bluetooth_1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT hold tap 1";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&bt_clr1>, <&bt_sel1>;
+        };
+
+        ht_bt2: hold_tap_bluetooth_2 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BT hold tap 2";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&bt_clr2>, <&bt_sel2>;
+        };
+    };
 
     combos {
         compatible = "zmk,combos";
@@ -137,19 +175,19 @@
         combo__bt_down {
             timeout-ms = <50>;
             key-positions = <0 2>;
-            bindings = <&bt_clr0>;
+            bindings = <&blt1 0 0>;
             layers = <1>;
         };
         combo__bt_left {
             timeout-ms = <50>;
             key-positions = <0 3>;
-            bindings = <&mt F G>;
+            bindings = <&blt0 0 0>;
             layers = <1>;
         };
         combo__bt_right {
             timeout-ms = <50>;
             key-positions = <0 4>;
-            bindings = <&blt 0 0>;
+            bindings = <&blt2 0 0>;
             layers = <1>;
         };
 

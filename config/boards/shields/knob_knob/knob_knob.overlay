@@ -4,27 +4,6 @@
  * SPDX-License-Identifier: MIT
  */
 
-/*
- *  Xiao BLE Pin Verification
- *  
- *  Seems like some pins might be electrically connected, so testing various pins for signal.
- *  If the forum link is for the Xiao BLE (not original Xiao), the pins 5/8 and 4/10 are connected. :'(
- *  @see https://forum.seeedstudio.com/t/xiao-are-pin-4-and-pin-10-electrically-connected-100-reproduced-on-3-boards/263128/12
- * 
- *  GPIO Pins :: Notes
- *          0 :: Doesn't seem to work (kscan + encoder)
- *          1 :: Works, tested with kscan
- *          2 :: Doesn't seem to work (kscan)
- *          3 :: Doesn't seem to work (kscan)
- *          4 :: Works, tested with kscan + encoder
- *          5 :: Works, tested with kscan + encoder
- *          6 :: Works, tested with kscan
- *          7 :: Works, tested with kscan
- *          8 :: Works, tested with kscan
- *          9 :: Works, tested with kscan, encoder previously didn't work
- *         10 :: Works, tested with kscan, encoder previously didn't work
- */
-
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -35,27 +14,27 @@
         label = "KSCAN";
 
         // GPIO Pins :: Function    :: Corresponding Keymap index
-        //         4 :: DOWN        :: 2
-        //         5 :: CW          :: --
-        //         6 :: CCW         :: -- 
-        //         7 :: PUSH        :: 0
-        //         8 :: UP          :: 1
-        //         9 :: LEFT        :: 3
-        //        10 :: RIGHT       :: 4
+        //        19 :: DOWN        :: 2
+        //         8 :: CW          :: --
+        //         9 :: CCW         :: -- 
+        //        21 :: PUSH        :: 0
+        //        20 :: UP          :: 1
+        //        18 :: LEFT        :: 3
+        //        15 :: RIGHT       :: 4
         input-gpios
-            = <&xiao_d 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&xiao_d 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 
     center_encoder: encoder_center {
         compatible = "alps,ec11";
         label = "CENTER_ENCODER";
-        a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <1>;
         status = "okay";
     };

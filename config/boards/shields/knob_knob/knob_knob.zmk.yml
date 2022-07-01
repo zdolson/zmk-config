@@ -3,7 +3,7 @@ id: knob_knob
 name: Knob Knob
 type: shield
 url: https://github.com/zdolson/zmk-config
-requires: [xiao]
+requires: [nice_nano_v2]
 features:
   - keys
   - encoder

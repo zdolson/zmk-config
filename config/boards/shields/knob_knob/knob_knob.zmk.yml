@@ -4,6 +4,8 @@ name: Knob Knob
 type: shield
 url: https://github.com/zdolson/zmk-config
 requires: [nice_nano_v2]
+exposes: [i2c_oled]
 features:
   - keys
   - encoder
+  - display

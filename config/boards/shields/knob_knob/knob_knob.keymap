@@ -149,8 +149,7 @@
         combo__bt_right {
             timeout-ms = <50>;
             key-positions = <0 4>;
-            bindings = <&blt &bt_clr0 &bt_sel0>;
-            // bindings = <&mt &bt_clr0 &bt_sel0>;
+            bindings = <&mt &bt_clr0 &bt_sel0>;
             layers = <1>;
         };
 
@@ -185,14 +184,14 @@
         //     >;
 
         // };
-
+        
         test_layer {
             
             // Key Ordering (based on `input-gpios` indices): Center, Up, Down, Left, Right
             bindings = < 
                 &kp A 
                 &tog TEST 
-                &bt BT_CLR
+                &bt_clr0
                 &kp E
                 &kp Z
             >;

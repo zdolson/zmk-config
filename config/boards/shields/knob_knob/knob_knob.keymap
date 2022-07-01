@@ -9,8 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-// #define BT    1
-#define TEST    1
+#define BT    1
 
 &mt {
     flavor = "tap-preferred";
@@ -117,7 +116,7 @@
         combo_default_up {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&tog TEST>;
+            bindings = <&tog BT>;
             layers = <0>;
         };
         combo_default_down {
@@ -140,36 +139,10 @@
         };
 
         // BT combos
-        // combo__bt_up {
-        //     timeout-ms = <50>;
-        //     key-positions = <0 1>;
-        //     bindings = <&tog BT>;
-        //     layers = <1>;
-        // };
-        // combo__bt_down {
-        //     timeout-ms = <50>;
-        //     key-positions = <0 2>;
-        //     bindings = <&bt BT_SEL 1>;
-        //     layers = <1>;
-        // };
-        // combo__bt_left {
-        //     timeout-ms = <50>;
-        //     key-positions = <0 3>;
-        //     bindings = <&bt BT_SEL 0>;
-        //     layers = <1>;
-        // };
-        // combo__bt_right {
-        //     timeout-ms = <50>;
-        //     key-positions = <0 4>;
-        //     bindings = <&bt BT_SEL 2>;
-        //     layers = <1>;
-        // };
-
-        // TEST combos
         combo__bt_up {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&tog TEST>;
+            bindings = <&tog BT>;
             layers = <1>;
         };
         combo__bt_down {
@@ -201,7 +174,7 @@
             // Key Ordering (based on `input-gpios` indices): Center, Up, Down, Left, Right
             bindings = < 
                 &kp C_PLAY_PAUSE 
-                &tog TEST 
+                &tog BT 
                 &kp C_MUTE 
                 &kp C_PREV 
                 &kp C_NEXT 
@@ -210,25 +183,12 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        // bt_layer {
-            
-        //     // Key Ordering (based on `input-gpios` indices): Center, Up, Down, Left, Right
-        //     bindings = < 
-        //         &none 
-        //         &tog BT 
-        //         &bt BT_SEL 1 
-        //         &bt BT_SEL 0 
-        //         &bt BT_SEL 2
-        //     >;
-
-        // };
-
-        test_layer {
+        bt_layer {
             
             // Key Ordering (based on `input-gpios` indices): Center, Up, Down, Left, Right
             bindings = < 
                 &kp A 
-                &tog TEST 
+                &tog BT 
                 &kp S
                 &kp E
                 &kp Z

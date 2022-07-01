@@ -48,7 +48,7 @@
 
 &pro_micro_i2c {
     status = "okay";
-    sda-pin = <09>; // nice!nano pin 009
+    sda-pin = <9>; // nice!nano pin 009
 	scl-pin = <10>; // nice!nano pin 010
 
     oled: ssd1306@3c {

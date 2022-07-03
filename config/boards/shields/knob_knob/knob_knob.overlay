@@ -48,8 +48,8 @@
 
 &pro_micro_i2c {
     status = "okay";
-    sda-pin = <11>; // nice!nano pin 011
-	scl-pin = <24>; // nice!nano pin 024
+    sda-pin = <10>; // nice!nano pin 010
+	scl-pin = <43>; // nice!nano pin 111
     // sda-pin = <9>; // nice!nano pin 009
 	// scl-pin = <10>; // nice!nano pin 010
 

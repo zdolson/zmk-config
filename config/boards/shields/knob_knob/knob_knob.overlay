@@ -23,19 +23,19 @@
         //        18 :: LEFT        :: 3
         //        15 :: RIGHT       :: 4
         input-gpios
-            = <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-            , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            = <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+            , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
 
     center_encoder: encoder_center {
         compatible = "alps,ec11";
         label = "CENTER_ENCODER";
-        a-gpios = <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <1>;
         status = "okay";
     };
@@ -48,8 +48,8 @@
 
 &pro_micro_i2c {
     status = "okay";
-    sda-pin = <10>; // nice!nano pin 010
-	scl-pin = <43>; // nice!nano pin 111
+    sda-pin = <11>; // nice!nano pin 011
+	scl-pin = <32>; // nice!nano pin 100
     // sda-pin = <9>; // nice!nano pin 009
 	// scl-pin = <10>; // nice!nano pin 010
 

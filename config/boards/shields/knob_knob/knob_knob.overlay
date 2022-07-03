@@ -34,8 +34,8 @@
     center_encoder: encoder_center {
         compatible = "alps,ec11";
         label = "CENTER_ENCODER";
-        a-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <1>;
         status = "okay";
     };
@@ -48,8 +48,10 @@
 
 &pro_micro_i2c {
     status = "okay";
-    sda-pin = <9>; // nice!nano pin 009
-	scl-pin = <10>; // nice!nano pin 010
+    sda-pin = <11>; // nice!nano pin 011
+	scl-pin = <32>; // nice!nano pin 100
+    // sda-pin = <9>; // nice!nano pin 009
+	// scl-pin = <10>; // nice!nano pin 010
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";

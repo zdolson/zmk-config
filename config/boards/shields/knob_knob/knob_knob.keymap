@@ -13,11 +13,6 @@
 #define BT      1
 #define SYSTEM  2
 
-&mt {
-    flavor = "tap-preferred";
-    tapping-term-ms = <1000>;
-};
-
 / {
 
     macros {
@@ -106,7 +101,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "Layer toggle hold tap";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <1000>;
             flavor = "tap-preferred";
             bindings = <&tog_layer2>, <&tog_layer1>;
         };
@@ -115,7 +110,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BT hold tap 0";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <2000>;
             flavor = "tap-preferred";
             bindings = <&bt_clr0>, <&bt_sel0>;
         };
@@ -124,7 +119,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BT hold tap 1";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <2000>;
             flavor = "tap-preferred";
             bindings = <&bt_clr1>, <&bt_sel1>;
         };
@@ -133,7 +128,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "BT hold tap 2";
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <2000>;
             flavor = "tap-preferred";
             bindings = <&bt_clr2>, <&bt_sel2>;
         };

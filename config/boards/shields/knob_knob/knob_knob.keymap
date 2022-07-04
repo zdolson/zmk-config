@@ -21,6 +21,25 @@
 / {
 
     macros {
+        // Hold Tap Macros for Layer
+        tog_layer1: tog_layer_1 {
+            label = "tog_layer_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &tog BT>
+                ;
+        };
+
+        tog_layer2: tog_layer_2 {
+            label = "tog_layer_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &tog SYSTEM>
+                ;
+        };
+
         // Hold Tap Macros for BT 0
         bt_clr0: bluetooth_clear_0 {
             label = "bluetooth_clear_0";
@@ -89,7 +108,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "tap-preferred";
-            bindings = <&tog>, <&tog>;
+            bindings = <&tog_layer2>, <&tog_layer1>;
         };
 
         ht_bt0: hold_tap_bluetooth_0 {
@@ -127,7 +146,7 @@
         combo_default_up {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&ht_layer SYSTEM BT>;
+            bindings = <&ht_layer 0 0>;
             layers = <0>;
         };
         combo_default_down {

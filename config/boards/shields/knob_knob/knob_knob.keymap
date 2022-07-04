@@ -9,7 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define BT    1
+#define BT      1
+#define SYSTEM  2
 
 &mt {
     flavor = "tap-preferred";
@@ -81,6 +82,15 @@
     };
 
     behaviors {
+        ht_layer: hold_tap_layer_toggle {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Layer toggle hold tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            bindings = <&tog>, <&tog>;
+        };
+
         ht_bt0: hold_tap_bluetooth_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "BT hold tap 0";
@@ -116,7 +126,7 @@
         combo_default_up {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            bindings = <&tog BT>;
+            bindings = <&ht_layer SYSTEM BT>;
             layers = <0>;
         };
         combo_default_down {
@@ -164,14 +174,42 @@
             layers = <1>;
         };
 
+        // System combos
+        combo__system_up {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&tog SYSTEM>;
+            layers = <2>;
+        };
+        combo__system_down {
+            timeout-ms = <50>;
+            key-positions = <0 2>;
+            bindings = <&bootloader>;
+            layers = <2>;
+        };
+        combo__system_left {
+            timeout-ms = <50>;
+            key-positions = <0 3>;
+            bindings = <&ext_power EP_ON>;
+            layers = <2>;
+        };
+        combo__system_right {
+            timeout-ms = <50>;
+            key-positions = <0 4>;
+            bindings = <&ext_power EP_TOG>;
+            layers = <2>;
+        };
+
     };
 
     keymap {
         compatible = "zmk,keymap";
 
+        // Key Ordering (based on `input-gpios` indices): Center, Up, Down, Left, Right
+        // Bindings on non-Center keys here don't matter since bindings are actually set within combos due to
+        // how the encoder switch works electrically.
+
         default_layer {
-            
-            // Key Ordering (based on `input-gpios` indices): Center, Up, Down, Left, Right
             bindings = < 
                 &kp C_PLAY_PAUSE 
                 &tog BT 
@@ -184,14 +222,23 @@
         };
 
         bt_layer {
-            
-            // Key Ordering (based on `input-gpios` indices): Center, Up, Down, Left, Right
             bindings = < 
-                &kp A 
+                &kp A   // Do something different? 
                 &tog BT 
-                &kp S
-                &kp E
-                &kp Z
+                &kp B
+                &kp C
+                &kp D
+            >;
+
+        };
+
+        system_layer {
+            bindings = < 
+                &reset 
+                &tog SYSTEM 
+                &kp F
+                &kp G
+                &kp H
             >;
 
         };

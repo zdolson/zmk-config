@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "knob_knob-pinctrl.dtsi";
+
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -48,8 +50,11 @@
 
 &pro_micro_i2c {
     status = "okay";
-    sda-pin = <9>; // nice!nano pin 009
-	scl-pin = <10>; // nice!nano pin 010
+    // sda-pin = <9>; // nice!nano pin 009
+	// scl-pin = <10>; // nice!nano pin 010
+    pinctrl-0 = <&i2c0_default>;
+    pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";

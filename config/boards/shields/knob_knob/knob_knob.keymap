@@ -252,7 +252,7 @@
 
         system_layer {
             bindings = < 
-                &reset 
+                &sys_reset 
                 &tog SYSTEM 
                 &kp F
                 &kp G

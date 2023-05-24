@@ -1,0 +1,53 @@
+{
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {
+                    "label": "Center",
+                    "row": 0,
+                    "col": 1,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "label": "Up",
+                    "row": 1,
+                    "col": 0,
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "label": "Down",
+                    "row": 1,
+                    "col": 1,
+                    "x": 1,
+                    "y": 2
+                },
+                {
+                    "label": "Left",
+                    "row": 2,
+                    "col": 0,
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "label": "Right",
+                    "row": 2,
+                    "col": 1,
+                    "x": 2,
+                    "y": 1
+                }
+            ]
+        }
+    },
+    "sensors": [
+        {
+            "label": "Knob Encoder",
+            "row": 3,
+            "col": 0,
+            "x": 1,
+            "y": 3,
+            "r": 15
+        }
+    ]
+}
